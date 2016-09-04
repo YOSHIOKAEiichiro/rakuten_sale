@@ -1,13 +1,13 @@
 require 'date'
 require 'selenium-webdriver'
 
-@target_page = 'http://item.rakuten.co.jp/enetroom/560072/'
-@start_time = Time.new(2016, 9, 4, 17, 14, 0, "+09:00")
-@user_email = 'nantokakantoka@gmail.com'
-@user_password = 'nantokakanota'
+target_page = 'http://item.rakuten.co.jp/enetroom/560072/'
+start_time = Time.new(2016, 9, 4, 16, 28, 0, "+09:00")
+user_email = 'nantokakantoka@gmail.com'
+user_password = 'nantokakanota'
 
 driver = Selenium::WebDriver.for :chrome
-driver.manage.timeouts.implicit_wait = 30 # 秒
+driver.manage.timeouts.implicit_wait = 6000 # 秒
 driver.navigate.to @target_page
 
 loop do
